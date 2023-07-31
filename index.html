@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="left">
+            <img src="img/logo.svg" alt="изображен логотип с белыми буквами и названием компании intoo "
+                class="left__logo">
+        </div>
+        <div class="right">
+            <img class="right__mobile__logo" src="img/logo-blue.svg" alt="изображен логотип с белыми буквами и названием компании intoo">
+            <h2 class="right__title">Get iintoo it today</h2>
+            <p class="right__subtitle">There is no charge or obligation upon registration.</p>
+            <div class="right__buttons buttons">
+                <a class="buttons__fb" href="#"><img src="img/facebook.svg"
+                        alt="на кнопке изображен логотип компании Facebook" class="fb__logo">Register with Facebook</a>
+                <a class="buttons__in" href="#"><img src="img/linkedin.svg"
+                        alt="на кнопке изображен логотип компании LinkedIn" class="in__logo">Register with LinkedIn</a>
+            </div>
+            <div class="right__or">
+                <hr>
+                <p>OR</p>
+                <hr>
+            </div>
+            <form class="form" action="#">
+                <div class="row">
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="form__email">
+                        <label for="form__email" class="form__label">Email</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="form__phone">
+                        <label for="form__phone" class="form__label">Phone</label>
+                    </div>
+                </div>
+                <p class="form__title">What type of investor are you?</p>
+                <p class="form__subtitle">Select the type of investor you are below.</p>
+                <div class="row form__radios">
+                    <div class="form__group">
+                        <input id="individual" type="radio" name="form__radio">
+                        <label for="individual">Individual</label>
+                        <img class="info" src="icons/icons8-info.svg" alt="">
+                        <div class="form__info">
+                            I am natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <input id="business" type="radio" name="form__radio">
+                        <label for="business">Business</label>
+                        <img class="info" src="icons/icons8-info.svg" alt="">
+                    </div>
+                    <div class="form__group">
+                        <input id="ira" type="radio" name="form__radio">
+                        <label for="ira">IRA</label>
+                        <img class="info" src="icons/icons8-info.svg" alt="">
+                    </div>
+                    <div class="form__group">
+                        <input id="trust" type="radio" name="form__radio">
+                        <label for="trust">Trust</label>
+                        <img class="info" src="icons/icons8-info.svg" alt="">
+                    </div>
+                </div>
+                <div class="form__checkbox">
+                    <input class="checkbox" id="accept" type="checkbox" name="form__checkbox">
+                    <label class="form__accept" for="accept">I agree to the terms and receiving notifications from iintoo <a class="form__accept__link" href="#">View full terms</a></label>
+                </div>
+                <input class="form__submit" type="submit" value="Create Account">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

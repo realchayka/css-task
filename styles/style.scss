@@ -1,0 +1,369 @@
+@import './variables.scss';
+@import './fonts.scss';
+
+body {
+    box-sizing: border-box;
+    background: $color-background;
+    font-family: "Barlow";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    max-width: 1200px;
+    max-height: 1000px;
+    width: 90vw;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+    background: $color-white;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+
+
+}
+
+.left {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    width: 50%;
+    position: relative;
+
+    &__logo {
+        width: 100px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
+
+.right {
+    padding: 20px 40px;
+
+    &__title {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 1.2em;
+        color: $font-text-base;
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+        color: $font-text-secondary;
+    }
+
+    &__mobile__logo {
+        display: none;
+    }
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &__fb {
+        padding: 10px 25px;
+        color: $font-text-white;
+        background: $color-button-fb;
+    }
+
+    &__in {
+        padding: 10px 25px;
+        color: $font-text-white;
+        background: $color-button-in;
+    }
+
+    .fb__logo {
+        position: relative;
+        top: 1px;
+        left: -10px;
+        width: 15px;
+    }
+
+    .in__logo {
+        position: relative;
+        left: -10px;
+        width: 15px;
+    }
+}
+
+.right__or {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $font-text-secondary;
+    font-weight: 600;
+
+    hr {
+        border: none;
+        height: 1px;
+        margin: 10px;
+        width: 120px;
+        color: $color-light-gray;
+        background-color: $color-light-gray;
+
+    }
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+
+    &__group {
+        position: relative;
+        display: flex;
+    }
+
+    &__input {
+        padding: 12px 15px 0px 15px;
+        border-style: solid;
+        border-color: $color-light-gray;
+        height: 28px;
+        font-size: 0.8em;
+        width: 190px;
+
+        &:focus {
+
+            outline: none;
+            border-left: 2px solid $color-button-in;
+
+        }
+    }
+
+    &__label {
+        font-size: 0.8em;
+        color: $font-text-secondary;
+        position: absolute;
+        left: 16px;
+        top: 5px;
+    }
+
+    &__title {
+        margin-top: 40px;
+        color: $font-text-base;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        margin-top: 14px;
+        font-weight: normal;
+        font-size: 0.8em;
+        color: $font-text-secondary;
+    }
+
+    &__radios {
+        margin-top: 30px;
+    }
+
+    &__info {
+        -webkit-box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
+        color: $color-gray;
+        padding: 10px;
+        position: absolute;
+        width: 200px;
+        font-size: 0.8em;
+        top: 30px;
+    }
+
+    &__checkbox {
+        margin-top: 90px;
+    }
+
+    &__accept {
+        font-size: 0.8em;
+
+        &__link {
+            color: $color-button-in;
+            text-decoration: underline;
+        }
+    }
+
+    &__submit {
+        margin-top: 20px;
+        
+        color: $font-text-white;
+        background: $color-primary;
+        border-radius: 10px;
+        padding: 12px 7px;
+        width: 220px;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+            background: $color-button-fb;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+// Стилизация радио-кнопок
+
+input[type="radio"] {
+    padding-left: 1em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="radio"]+label:before {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $color-gray;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked+label::before {
+    border: 2px solid $color-primary;
+}
+
+.info {
+    color: $color-gray;
+    width: 10px;
+    margin-left: 4px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: relative;
+    top: 2px;
+}
+
+@media (max-width:1280px) {
+    .buttons {
+        &__in {
+            font-size: 0.8em;
+        }
+
+        &__fb {
+            font-size: 0.8em;
+        }
+    }
+
+    .form {
+        &__input {
+            box-sizing: border-box;
+            padding: 12px 0 0 15px;
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        &__mobile__logo {
+            display: block;
+            width: 200px;
+            position: absolute;
+            right: 50px;
+
+        }
+    }
+}
+
+@media (max-width:580px) {
+    .right__mobile__logo {
+        width: 150px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        &__in{
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        &__fb {
+            border-radius: 10px;
+        }
+    }
+
+    .row {
+        display: block;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .form {
+        &__title {
+            margin-top: 20px;
+        }
+        &__radios{
+            margin-top: 10px;
+        }
+        &__group {
+            margin-top: 10px;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__submit {
+            margin-top: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__checkbox {
+            margin-top: 20px;
+        }
+        &__info {
+            top: 0px;
+            left: 120px;
+            width: 120px;
+        }
+    }
+}
+
+@media (max-width:420px){
+    .main{
+        width: 95vw;
+    }
+    .right{
+        padding: 10px;
+        &__title {
+            font-size: 1em;
+        }
+        &__or {
+            margin-top: 25px;
+        }
+        &__mobile__logo {
+            width: 120px;
+        }
+    }
+    .form {
+        &__title {
+            font-size: 1em;
+        }
+        &__submit {
+            margin-bottom: 20px;
+        }
+    }
+    hr {
+        display: none;
+    }
+}
